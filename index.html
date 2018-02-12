@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Munch - Clarifai + Wolfram Demo </title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/wolfram.js"></script>
+  <script type="text/javascript" src="predict.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/app.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>What are you eating?</h1>
+    <h2>Snap a photo of your food & upload for a nutritional breakdown.</h2>
+
+    <form action="#">
+      <input type="file" id="filename" placeholder="Filename" size="100"/>
+      <button onclick="predict_click($('#filename').val(), 'file'); return false;">Get my Nutritional Breakdown!</button>
+    </form>
+
+    <div id="predictions">
+      <div class="food-photo">
+        <div class="step"><span>1</span> Upload a Photo</div>
+      </div>
+      <div class="nutrition">
+        <div class="step"><span>2</span> Get a Nutritional Breakdown</div>
+        <div id="concepts"></div>
+      </div>
+    </div>
+
+    <div class="powered-by">
+      <p>Inspired by <a href="https://devpost.com/software/munch-emsv0u">Munch</a>.  Powered by <img src="https://clarifai.com/static/images/logo.png" alt="Clarifai" />.</p>
+    </div>
+  </div>
+</body>
+</html>
