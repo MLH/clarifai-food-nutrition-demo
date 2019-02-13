@@ -1,7 +1,7 @@
 # Clarifai Nutritional Breakdown Demo
 
 Learn how to use Clarifai’s food model and the Wolfram Alpha API to recognize
-what you’re eating & get a nutritional breakdown.
+what you’re eating & get a nutritional breakdown. Follow our [Clarifai tutorial here](https://stories.mlh.io/watch-what-you-eat-with-clarifai-71185734bc61).
 
 ![](/docs/demo.gif)
 
